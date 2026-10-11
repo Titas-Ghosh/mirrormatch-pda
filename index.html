@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- saved from url=(0400)https://sdmntprnortheu.oaiusercontent.com/files/00000000-87ec-81f4-bf56-ea74ba0295b1/raw?se=2026-10-11T21%3A27%3A13Z&sp=r&sv=2026-02-06&sr=b&scid=b3d4b810-214c-422b-84cc-29cc4c43fb57&skoid=3cb6de21-012a-49c9-9402-a1ebf8d0bd06&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-10T23%3A23%3A44Z&ske=2026-10-11T23%3A23%3A44Z&sks=b&skv=2026-02-06&sig=TGzEyTBD9QN5DxiHHq0I0T/jV6XR8ifHn/S4xNB%2BAcM%3D -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090b0a">
+<title>MirrorMatch | The Palindrome Engine</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{--bg:#090b0a;--panel:#101411;--panel2:#151b16;--line:#29342b;--white:#eff5ed;--muted:#8c9a8d;--lime:#d0ff70;--mint:#8df0c5;--red:#ff806e;--gold:#f2ce78;--mono:'DM Mono',monospace;--sans:'DM Sans',sans-serif;--display:'Space Grotesk',sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font-family:var(--sans);background-image:radial-gradient(ellipse at 82% 0%,#baff6d0b,transparent 30%),linear-gradient(#ffffff06 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px);background-size:auto,42px 42px,42px 42px}
+.wrap{max-width:1260px;margin:auto;padding:0 28px}.mono{font-family:var(--mono)}header{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.brand{font:600 17px var(--display);letter-spacing:-.05em;display:flex;align-items:center;gap:11px}.mark{width:31px;height:31px;border:1px solid #526044;color:var(--lime);border-radius:9px;display:grid;place-items:center;font-size:17px;transform:rotate(-6deg)}.header-meta{font:10px var(--mono);color:var(--muted);letter-spacing:.1em;text-transform:uppercase}.live{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px #d0ff70;margin-right:8px}
+.hero{padding:55px 0 35px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end}.kicker{font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--lime)}h1{font:500 clamp(48px,7vw,84px)/.93 var(--display);letter-spacing:-.085em;margin:17px 0 15px}h1 span{color:var(--lime)}.hero p{color:#9ba89c;font-size:14px;line-height:1.7;max-width:640px;margin:0}.hero-side{text-align:right;padding-bottom:6px}.hero-side strong{font:500 30px var(--display);letter-spacing:-.06em;display:block}.hero-side span{font:10px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+main{padding-bottom:50px}.shell{border:1px solid #354137;border-radius:12px;overflow:hidden;background:#0d110e;box-shadow:0 30px 100px #0007}.shell-head{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;padding:15px 19px;border-bottom:1px solid var(--line);background:#111612}.shell-title{font:500 12px var(--mono);letter-spacing:.08em}.shell-title b{color:var(--lime);font-weight:500}.shell-meta{font:10px var(--mono);color:var(--muted)}.workspace{display:grid;grid-template-columns:300px minmax(0,1fr)}.sidebar{padding:21px;border-right:1px solid var(--line);background:#101411}.label{display:block;font:10px var(--mono);color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px}.inputrow{display:flex;gap:7px}.input{width:100%;min-width:0;background:#080b09;border:1px solid #39463a;color:var(--lime);border-radius:6px;padding:12px;font:15px var(--mono);outline:none}.input:focus{border-color:var(--lime)}button{cursor:pointer;font-family:var(--sans);transition:.18s}button:disabled{opacity:.35;cursor:not-allowed}.go{background:var(--lime);border:0;color:#10150b;border-radius:5px;padding:0 13px;font-size:11px;font-weight:700;white-space:nowrap}.go:hover{filter:brightness(1.1)}.samples{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.sample{background:#151b16;color:#aebaae;border:1px solid #303b31;border-radius:4px;padding:7px 8px;font:10px var(--mono)}.sample:hover,.sample.active{border-color:var(--lime);color:var(--lime)}.hint{font-size:11px;line-height:1.6;color:#738075;margin:13px 0 25px}.divider{height:1px;background:var(--line);margin:21px 0}.sidehead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font:11px var(--mono);color:#c5d0c5}.tiny{font:9px var(--mono);color:#718072}.branch-list{display:flex;flex-direction:column;gap:6px}.branch{display:grid;grid-template-columns:31px 1fr auto;gap:9px;align-items:center;text-align:left;border:1px solid #2b352c;border-radius:5px;background:#0c100d;color:#c4cec5;padding:9px}.branch:hover{border-color:#708858}.branch.selected{border-color:var(--lime);background:#1a2315}.branch-id{font:10px var(--mono);color:#758473}.branch-main{font-size:11px}.branch-sub{display:block;font:9px var(--mono);color:#788679;margin-top:3px}.pill{font:9px var(--mono);text-transform:uppercase;letter-spacing:.04em}.pill.yes{color:var(--mint)}.pill.no{color:var(--red)}.pill.maybe{color:var(--gold)}.mainstage{min-width:0}.stagebar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:17px 22px;border-bottom:1px solid var(--line)}.stagebar h2{font:500 13px var(--display);margin:0}.statebadge{font:10px var(--mono);color:var(--lime);border:1px solid #45543c;background:#171f13;padding:6px 9px;border-radius:4px}.stage-content{padding:22px}.explain{display:flex;align-items:start;gap:13px;border:1px solid #2c382d;border-radius:7px;background:#121812;padding:14px 15px;margin-bottom:21px}.stepnum{width:28px;height:28px;flex:none;display:grid;place-items:center;border-radius:6px;background:#26351c;color:var(--lime);font:11px var(--mono)}.explain h3{font:500 13px var(--display);margin:1px 0 5px}.explain p{font-size:11px;line-height:1.65;color:#9aa79b;margin:0}.explain strong{color:var(--lime);font-weight:600}.subheading{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.subheading span:first-child{font:10px var(--mono);color:#c0cbc1;text-transform:uppercase;letter-spacing:.1em}.subheading span:last-child{font:9px var(--mono);color:#6f7c70}
+.tapearea{padding:24px 12px 13px;border:1px solid #2d382e;border-radius:8px;background:linear-gradient(180deg,#0a0e0b,#0d120e);overflow:hidden}.tape{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;min-height:58px}.char{width:clamp(29px,4vw,43px);height:46px;border:1px solid #384339;background:#151b16;border-radius:5px;display:grid;place-items:center;font:15px var(--mono);color:#dce6dc;position:relative;transition:transform .25s,border-color .25s,background .25s;animation:pop .24s ease-out}.char .index{position:absolute;top:-17px;font:9px var(--mono);color:#657367}.char.push{background:#202b18;border-color:#668448;color:var(--lime)}.char.center{background:#2a2415;border-color:var(--gold);color:var(--gold)}.char.match{background:#13251c;border-color:#477c65;color:var(--mint)}.char.current{background:var(--lime);border-color:var(--lime);color:#0a1008;transform:translateY(-4px);box-shadow:0 6px 25px #d0ff7028}.char.mismatch{background:#321a17;border-color:var(--red);color:var(--red)}.pointer{height:29px;display:flex;justify-content:center;align-items:center;color:var(--lime);font:10px var(--mono);gap:4px}.pointer span{border-left:1px solid var(--lime);height:12px}.tape-legend{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:12px;font:9px var(--mono);color:#849185}.key{display:inline-block;width:7px;height:7px;border-radius:2px;margin-right:5px;background:#384339}.key.kpush{background:var(--lime)}.key.kcenter{background:var(--gold)}.key.kmatch{background:var(--mint)}.key.kbad{background:var(--red)}
+.lower-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px}.vizcard{border:1px solid #2d382e;border-radius:8px;background:#0a0e0b;padding:15px;min-width:0}.vizhead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:15px}.vizhead h3{font:500 11px var(--mono);letter-spacing:.08em;margin:0;color:#d5ded5}.vizhead span{font:9px var(--mono);color:#778579}.stack-wrap{height:170px;display:flex;align-items:end;justify-content:center;position:relative;padding:8px 0 13px}.stack-tower{width:min(210px,100%);min-height:30px;border-bottom:3px solid #465447;display:flex;flex-direction:column-reverse;align-items:stretch;gap:4px;padding:0 12px 8px}.stack-block{height:26px;flex:none;display:grid;place-items:center;background:#1c2817;border:1px solid #6a884b;color:var(--lime);border-radius:4px;font:11px var(--mono);animation:stack .24s ease-out}.stack-block.top{box-shadow:0 0 16px #d0ff7015;border-color:var(--lime)}.stack-block.bottom{background:#1b211c;border-color:#4b584d;color:#aab7ab}.empty{font:10px var(--mono);color:#576558;text-align:center;margin:auto}.stack-side{position:absolute;left:0;top:0;writing-mode:vertical-rl;transform:rotate(180deg);font:9px var(--mono);color:#5f6e61;letter-spacing:.1em}.operation{min-height:31px;border-top:1px solid #222b23;padding-top:10px;font:10px var(--mono);color:#98a69a}.operation b{color:var(--lime);font-weight:500}.state-flow{display:flex;align-items:center;justify-content:center;gap:8px;min-height:170px;flex-wrap:wrap}.state{width:66px;height:66px;border-radius:50%;border:1px solid #435044;display:grid;place-items:center;position:relative;color:#aebbae;font:12px var(--mono);background:#111712}.state.active{border:2px solid var(--lime);color:var(--lime);box-shadow:0 0 24px #d0ff7017}.state.accept{border:3px double var(--mint);color:var(--mint)}.state.reject{border-color:var(--red);color:var(--red)}.state small{position:absolute;top:calc(100% + 7px);white-space:nowrap;font:8px var(--mono);color:#718072}.arrow{font:17px var(--mono);color:#637360}.flow-caption{width:100%;text-align:center;font:9px var(--mono);color:#68786a;margin-top:18px}.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.ctrl{border:1px solid #39463a;background:#171d18;color:#c9d4ca;border-radius:5px;padding:11px 14px;font-size:11px}.ctrl:hover:not(:disabled){border-color:var(--lime);color:var(--lime)}.ctrl.primary{background:var(--lime);border-color:var(--lime);color:#0b1108;font-weight:700}.ctrl.primary:hover:not(:disabled){color:#0b1108}.ctrl.auto{margin-left:auto}.progress{height:3px;background:#202920;margin-top:17px;border-radius:5px;overflow:hidden}.progress div{height:100%;width:0;background:var(--lime);transition:width .3s}.progress-label{display:flex;justify-content:space-between;margin-top:7px;font:9px var(--mono);color:#708072}.result{margin-top:14px;padding:14px 16px;border-radius:7px;display:none;font-size:12px;line-height:1.6}.result.show{display:block;animation:pop .3s}.result.good{border:1px solid #32694f;background:#102219;color:#b4f3d2}.result.bad{border:1px solid #814b42;background:#281714;color:#ffb0a2}.result strong{display:block;font:600 16px var(--display);margin-bottom:4px}.footnote{font-size:10px;color:#718073;line-height:1.6;margin-top:11px}
+.explain-section{padding:65px 0 30px}.section-title{font:500 clamp(31px,4vw,45px)/1 var(--display);letter-spacing:-.07em;margin:12px 0}.section-desc{font-size:12px;color:var(--muted);line-height:1.7;max-width:520px}.concepts{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:25px}.concept{padding:20px;border:1px solid var(--line);background:#101411;border-radius:8px}.concept .n{font:10px var(--mono);color:var(--lime)}.concept h3{font:500 19px var(--display);margin:22px 0 8px;letter-spacing:-.04em}.concept p{font-size:11px;line-height:1.7;color:#8e9b90;margin:0}.formal{margin-top:15px;padding:21px;border:1px solid var(--line);border-radius:8px;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center;background:linear-gradient(110deg,#121813,#0b0f0c)}.formal h3{font:500 21px var(--display);margin:10px 0}.formal p{font-size:11px;line-height:1.7;color:var(--muted);margin:0}.formula{padding:14px;border:1px solid #344034;background:#080c09;border-radius:5px;font:10px/2 var(--mono);color:#acbaad}.formula em{font-style:normal;color:var(--lime)}footer{border-top:1px solid var(--line);padding:20px 0 26px;margin-top:55px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:9px var(--mono);color:#6f7b70;letter-spacing:.06em}
+@keyframes pop{from{opacity:0;transform:translateY(5px) scale(.97)}to{opacity:1;transform:none}}@keyframes stack{from{opacity:0;transform:translateY(-9px)}to{opacity:1;transform:none}}
+@media(max-width:900px){.workspace{grid-template-columns:1fr}.sidebar{border-right:0;border-bottom:1px solid var(--line)}.sidebar-top{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}.hint{margin-bottom:5px}.divider{display:none}.branch-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr}.hero-side{text-align:left}.hero-side strong{display:inline-block;margin-right:10px}.hero-side span{display:inline-block}}@media(max-width:580px){.wrap{padding:0 13px}.hero{padding:42px 0 25px}h1{font-size:52px}.workspace .sidebar{padding:15px}.sidebar-top{display:block}.stage-content{padding:13px}.stagebar{padding:14px}.lower-grid{grid-template-columns:1fr}.concepts{grid-template-columns:1fr}.concept{padding:17px}.concept h3{margin-top:12px}.formal{grid-template-columns:1fr}.ctrl{padding:10px}.ctrl.auto{margin-left:0}.char{width:31px;height:40px}.tapearea{padding:22px 5px 10px}.header-meta{font-size:8px}.branch-list{grid-template-columns:1fr 1fr}}
+
+/* Mirror arena: the visual proof */
+.mirror-arena{position:relative;margin-top:15px;border:1px solid #344034;border-radius:9px;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#caff7010,transparent 55%),#090d0a}
+.mirror-arena-head{padding:13px 15px;border-bottom:1px solid #273128;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.mirror-arena-head b{font:10px var(--mono);letter-spacing:.1em;color:#dbe6da;font-weight:400}
+.mirror-arena-head span{font:9px var(--mono);color:#718072}
+.mirror-stage{height:210px;position:relative;isolation:isolate;padding:18px 10px 12px}
+.mirror-stage svg{position:absolute;inset:0;width:100%;height:100%;z-index:0;overflow:visible;pointer-events:none}
+.mirror-cells{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:clamp(3px,1vw,10px);flex-wrap:wrap;padding-top:6px}
+.mirror-cell{width:clamp(27px,3.8vw,40px);height:42px;border:1px solid #39463a;background:#141a15;border-radius:5px;display:grid;place-items:center;font:14px var(--mono);color:#dbe5da;position:relative;transition:transform .55s cubic-bezier(.2,.8,.2,1),background .3s,border-color .3s;box-shadow:0 6px 16px #0004}
+.mirror-cell.left{border-color:#8ba84f;background:#202b17;color:var(--lime)}
+.mirror-cell.right{border-color:#4d9b7a;background:#13271d;color:var(--mint)}
+.mirror-cell.center{border-color:var(--gold);background:#302815;color:var(--gold);box-shadow:0 0 20px #f2ce7822}
+.mirror-cell.bad{border-color:var(--red);background:#321a17;color:var(--red);animation:shake .36s}
+.mirror-cell .mi{position:absolute;top:-15px;font:8px var(--mono);color:#68776a}
+.mirror-center-mark{position:absolute;top:86px;left:50%;transform:translateX(-50%);font:9px var(--mono);color:var(--gold);letter-spacing:.12em;white-space:nowrap;opacity:0;transition:opacity .25s}
+.mirror-center-mark.show{opacity:1}
+.mirror-caption{position:absolute;left:12px;right:12px;bottom:13px;display:flex;justify-content:space-between;gap:10px;font:9px var(--mono);color:#68786a;text-transform:uppercase;letter-spacing:.08em}
+.mirror-caption strong{color:var(--lime);font-weight:400}
+.mirror-verdict{display:flex;align-items:center;gap:9px;padding:11px 14px;border-top:1px solid #273128;font:10px var(--mono);color:#aab8aa;min-height:39px}
+.mirror-verdict .spark{color:var(--lime);font-size:14px}
+.mirror-verdict.bad .spark{color:var(--red)}
+.mirror-verdict.good .spark{color:var(--mint)}
+.mirror-arena.reveal-pairs .mirror-cell.left,.mirror-arena.reveal-pairs .mirror-cell.right{animation:mirrorGlow .8s ease-in-out}
+@keyframes mirrorGlow{0%,100%{filter:brightness(1)}45%{filter:brightness(1.7);box-shadow:0 0 23px #d0ff7033}}
+@keyframes shake{0%,100%{transform:translateX(0)}30%{transform:translateX(-3px)}65%{transform:translateX(3px)}}
+@media(max-width:580px){.mirror-stage{height:195px;padding-left:5px;padding-right:5px}.mirror-cell{width:27px;height:37px;font-size:12px}.mirror-caption{font-size:8px}}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="https://sdmntprnortheu.oaiusercontent.com/files/00000000-87ec-81f4-bf56-ea74ba0295b1/raw?se=2026-10-11T21%3A27%3A13Z&amp;sp=r&amp;sv=2026-02-06&amp;sr=b&amp;scid=b3d4b810-214c-422b-84cc-29cc4c43fb57&amp;skoid=3cb6de21-012a-49c9-9402-a1ebf8d0bd06&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2026-10-10T23%3A23%3A44Z&amp;ske=2026-10-11T23%3A23%3A44Z&amp;sks=b&amp;skv=2026-02-06&amp;sig=TGzEyTBD9QN5DxiHHq0I0T/jV6XR8ifHn/S4xNB%2BAcM%3D#"><span class="mark">M</span> MirrorMatch<span style="color:var(--lime)">.</span></a><div class="header-meta"><span class="live"></span>Interactive automata lab · Team 09</div></header>
+<section class="hero"><div><div class="kicker">Theory of computation / visual experiment</div><h1>Find the middle.<br><span>Meet yourself.</span></h1><p>A palindrome recognizer you can actually inspect. Watch the input tape, stack memory, and state machine move together, then explore why one midpoint guess succeeds while another fails.</p></div><div class="hero-side"><strong>054–059</strong><span>Team 09 · Roll numbers</span></div></section>
+<main>
+<div class="shell">
+<div class="shell-head"><div class="shell-title"><b>MM / 001</b> &nbsp; PALINDROME ENGINE</div><div class="shell-meta">Σ = input alphabet · Z₀ = stack bottom</div></div>
+<div class="workspace">
+<aside class="sidebar">
+<div class="sidebar-top">
+<div><label class="label" for="word">Your input string</label><div class="inputrow"><input id="word" class="input" value="RACECAR" maxlength="15" aria-label="Input string"><button id="load" class="go">LOAD ↗</button></div><div class="samples"><button class="sample active" data-word="RACECAR">RACECAR</button><button class="sample" data-word="ABBA">ABBA</button><button class="sample" data-word="LEVEL">LEVEL</button><button class="sample" data-word="ABCA">ABCA</button><button class="sample" data-word="10101">10101</button></div><p class="hint">Use letters, digits, or symbols. Spaces are ignored. The alphabet is inferred from the symbols in your input.</p></div>
+<div><div class="divider"></div><div class="sidehead"><span>MIDPOINT HYPOTHESES</span><span class="tiny" id="branchTotal">15 PATHS</span></div><div id="branches" class="branch-list"><button class="branch " data-i="0"><span class="branch-id">01</span><span class="branch-main">Even split<span class="branch-sub">after 0 chars</span></span><span class="pill no">REJECT</span></button><button class="branch " data-i="1"><span class="branch-id">02</span><span class="branch-main">Odd center<span class="branch-sub">at “R” · position 1</span></span><span class="pill no">REJECT</span></button><button class="branch " data-i="2"><span class="branch-id">03</span><span class="branch-main">Even split<span class="branch-sub">after 1 chars</span></span><span class="pill no">REJECT</span></button><button class="branch " data-i="3"><span class="branch-id">04</span><span class="branch-main">Odd center<span class="branch-sub">at “A” · position 2</span></span><span class="pill no">REJECT</span></button><button class="branch " data-i="4"><span class="branch-id">05</span><span class="branch-main">Even split<span class="branch-sub">after 2 chars</span></span><span class="pill no">REJECT</span></button><button class="branch " data-i="5"><span class="branch-id">06</span><span class="branch-main">Odd center<span class="branch-sub">at “C” · position 3</span></span><span class="pill no">REJECT</span></button><button class="branch " data-i="6"><span class="branch-id">07</span><span class="branch-main">Even split<span class="branch-sub">after 3 chars</span></span><span class="pill no">REJECT</span></button><button class="branch selected" data-i="7"><span class="branch-id">08</span><span class="branch-main">Odd center<span class="branch-sub">at “E” · position 4</span></span><span class="pill yes">ACCEPT</span></button><button class="branch " data-i="8"><span class="branch-id">09</span><span class="branch-main">Even split<span class="branch-sub">after 4 chars</span></span><span class="pill no">REJECT</span></button><button class="branch " data-i="9"><span class="branch-id">10</span><span class="branch-main">Odd center<span class="branch-sub">at “C” · position 5</span></span><span class="pill no">REJECT</span></button><button class="branch " data-i="10"><span class="branch-id">11</span><span class="branch-main">Even split<span class="branch-sub">after 5 chars</span></span><span class="pill no">REJECT</span></button><button class="branch " data-i="11"><span class="branch-id">12</span><span class="branch-main">Odd center<span class="branch-sub">at “A” · position 6</span></span><span class="pill no">REJECT</span></button><button class="branch " data-i="12"><span class="branch-id">13</span><span class="branch-main">Even split<span class="branch-sub">after 6 chars</span></span><span class="pill no">REJECT</span></button><button class="branch " data-i="13"><span class="branch-id">14</span><span class="branch-main">Odd center<span class="branch-sub">at “R” · position 7</span></span><span class="pill no">REJECT</span></button><button class="branch " data-i="14"><span class="branch-id">15</span><span class="branch-main">Even split<span class="branch-sub">after 7 chars</span></span><span class="pill no">REJECT</span></button></div><p class="footnote">A nondeterministic PDA explores possible split points. One accepting path is enough.</p></div>
+</div>
+</aside>
+<section class="mainstage">
+<div class="stagebar"><h2>LIVE EXECUTION / <span style="color:var(--muted)">FOLLOW THE SELECTED BRANCH</span></h2><div class="statebadge" id="stateBadge">STATE q₀ · PUSH</div></div>
+<div class="stage-content">
+<div class="explain"><div class="stepnum" id="stepNum">01</div><div><h3 id="stepTitle">Ready to read</h3><p id="stepText">The input is <strong>RACECAR</strong>. The stack starts at bottom marker Z₀. This branch guesses an odd midpoint at position 4.</p></div></div>
+<div class="subheading"><span>01 / Input tape</span><span id="tapeInfo">7 SYMBOLS · HEAD AT START</span></div>
+<div class="tapearea"><div class="tape" id="tape"><div class="char "><span class="index">0</span>R</div><div class="char "><span class="index">1</span>A</div><div class="char "><span class="index">2</span>C</div><div class="char "><span class="index">3</span>E</div><div class="char "><span class="index">4</span>C</div><div class="char "><span class="index">5</span>A</div><div class="char "><span class="index">6</span>R</div></div><div class="pointer" id="pointer"><span></span>READ HEAD AT START<span></span></div><div class="tape-legend"><span><i class="key kpush"></i>Stored</span><span><i class="key kcenter"></i>Skipped center</span><span><i class="key kmatch"></i>Matched</span><span><i class="key kbad"></i>Mismatch</span></div></div>
+
+<div class="mirror-arena reveal-pairs" id="mirrorArena">
+  <div class="mirror-arena-head"><b>04 / THE MIRROR TEST</b><span>SYMMETRY IS THE PROOF</span></div>
+  <div class="mirror-stage" id="mirrorStage">
+    <svg id="mirrorLines" aria-hidden="true" viewBox="0 0 708.6068725585938 210"><path d="M 314.620698928833 69 C 314.620698928833 97, 393.98620796203613 97, 393.98620796203613 69" fill="none" stroke="#8df0c5" stroke-width="1.1" stroke-linecap="round" opacity=".35" stroke-dasharray="3 5"><animate attributeName="stroke-dashoffset" from="18" to="0" dur=".7s" repeatCount="1"></animate></path><circle cx="314.620698928833" cy="69" r="2.3" fill="#8df0c5" opacity=".35"></circle><circle cx="393.98620796203613" cy="69" r="2.3" fill="#8df0c5" opacity=".35"></circle><path d="M 274.9379291534424 69 C 274.9379291534424 110.27006469726562, 433.66894721984863 110.27006469726562, 433.66894721984863 69" fill="none" stroke="#8df0c5" stroke-width="1.1" stroke-linecap="round" opacity=".35" stroke-dasharray="3 5"><animate attributeName="stroke-dashoffset" from="18" to="0" dur=".7s" repeatCount="1"></animate></path><circle cx="274.9379291534424" cy="69" r="2.3" fill="#8df0c5" opacity=".35"></circle><circle cx="433.66894721984863" cy="69" r="2.3" fill="#8df0c5" opacity=".35"></circle><path d="M 235.25515937805176 69 C 235.25515937805176 130.90510498046876, 473.35171699523926 130.90510498046876, 473.35171699523926 69" fill="none" stroke="#8df0c5" stroke-width="1.1" stroke-linecap="round" opacity=".35" stroke-dasharray="3 5"><animate attributeName="stroke-dashoffset" from="18" to="0" dur=".7s" repeatCount="1"></animate></path><circle cx="235.25515937805176" cy="69" r="2.3" fill="#8df0c5" opacity=".35"></circle><circle cx="473.35171699523926" cy="69" r="2.3" fill="#8df0c5" opacity=".35"></circle></svg>
+    <div class="mirror-cells" id="mirrorCells"><div class="mirror-cell left" data-index="0"><span class="mi">1</span>R</div><div class="mirror-cell left" data-index="1"><span class="mi">2</span>A</div><div class="mirror-cell left" data-index="2"><span class="mi">3</span>C</div><div class="mirror-cell center" data-index="3"><span class="mi">4</span>E</div><div class="mirror-cell right" data-index="4"><span class="mi">5</span>C</div><div class="mirror-cell right" data-index="5"><span class="mi">6</span>A</div><div class="mirror-cell right" data-index="6"><span class="mi">7</span>R</div></div>
+    <div class="mirror-center-mark show" id="centerMark">SINGLE CENTER · NO PAIR</div>
+    <div class="mirror-caption"><span>← <strong>LEFT HALF</strong></span><span><strong>RIGHT HALF</strong> →</span></div>
+  </div>
+  <div class="mirror-verdict" id="mirrorVerdict"><span class="spark">↗</span><span>Green and mint halves are candidates for reflection. Step forward to test each pair.</span></div>
+</div>
+
+<div class="lower-grid">
+<div class="vizcard"><div class="vizhead"><h3>02 / STACK MEMORY</h3><span id="stackCount">0 ITEMS</span></div><div class="stack-wrap"><div class="stack-side">LAST IN · FIRST OUT</div><div class="stack-tower" id="stack"><div class="empty">STACK EMPTY ABOVE Z₀</div></div></div><div class="operation" id="stackOp">Operation: <b>initialise</b></div></div>
+<div class="vizcard"><div class="vizhead"><h3>03 / STATE MACHINE</h3><span>CONTROL FLOW</span></div><div class="state-flow"><div class="state active" id="q0">q₀<small>push phase</small></div><div class="arrow" id="arrow">→</div><div class="state" id="q1">q₁<small>match phase</small></div><div class="state" id="qf" style="display:none">qᶠ<small>accept</small></div><div class="flow-caption" id="transition">Start at q₀</div></div><div class="operation" id="stateOp">Transition: <b>read + push</b></div></div>
+</div>
+<div class="controls"><button class="ctrl" id="reset">↺ Reset path</button><button class="ctrl" id="back" disabled="">← Back</button><button class="ctrl primary" id="next">Next transition →</button><button class="ctrl auto" id="auto">▶ Play sequence</button></div><div class="progress"><div id="progressBar" style="width: 0%;"></div></div><div class="progress-label"><span id="progressText">STEP 1 OF 10</span><span id="branchResult">BRANCH IN PROGRESS</span></div><div class="result" id="result"></div>
+</div>
+</section>
+</div>
+</div>
+<section class="explain-section"><div class="kicker">The logic behind the mirror</div><h2 class="section-title">Three phases. One decision.</h2><p class="section-desc">A PDA uses a stack as unbounded last-in, first-out memory. Nondeterminism lets it guess the midpoint instead of needing to count the whole input first.</p>
+<div class="concepts"><article class="concept"><div class="n">01 / PUSH</div><h3>Remember</h3><p>In q₀, push each symbol before the guessed midpoint. The stack stores the prefix in reverse-access order.</p></article><article class="concept"><div class="n">02 / GUESS</div><h3>Split the string</h3><p>Switch to q₁ at a guessed midpoint. For odd lengths, consume one center symbol without pushing or matching it.</p></article><article class="concept"><div class="n">03 / MATCH</div><h3>Reflect</h3><p>Compare each remaining input symbol with the stack top. Equal symbols pop; a mismatch kills that branch.</p></article></div>
+<div class="formal"><div><div class="kicker">Formal definition</div><h3>The language of palindromes</h3><p>For a fixed alphabet Σ, a string belongs to the language if it equals its reverse. The empty string is also a palindrome. A correct nondeterministic PDA accepts if at least one branch reaches acceptance.</p></div><div class="formula">L = { w ∈ Σ* | w = wᴿ }<br>q₀: <em>read + push</em><br>q₀ → q₁: <em>guess midpoint</em><br>q₁: <em>compare + pop</em><br>Accept ⇔ input exhausted ∧ stack at Z₀</div></div>
+<footer><span>MIRRORMATCH · INTERACTIVE PDA EXPLORER</span><span>TEAM 09 · ROLL NO. 054 TO 059</span><span>BUILT FOR THEORY OF COMPUTATION</span></footer>
+</section>
+</main>
+</div>
+<script>
+(()=>{
+const $=id=>document.getElementById(id);
+let word='RACECAR', branches=[], chosen=0, timeline=[], step=0, timer=null;
+const stop=()=>{if(timer){clearInterval(timer);timer=null}$('auto').textContent='▶ Play sequence'};
+function makeBranches(w){
+ const out=[];
+ // A split is the number of symbols pushed. Odd paths skip the center after pushing floor(n/2).
+ // Include each possible even boundary and each possible odd center.
+ for(let k=0;k<=w.length;k++){
+   const isOddCenter=(k<w.length);
+   // boundary before character k: even split candidate
+   const left=w.slice(0,k), right=w.slice(k);
+   const evenOk=left===right.split('').reverse().join('');
+   out.push({id:out.length,kind:'even',k,left,right,ok:evenOk,label:`Between ${k-1<0?'start':k-1} | ${k}`,sub:`push ${k} · no center`,reason:evenOk?'Both halves mirror exactly.':'The halves are not reverses.'});
+   // odd center at k, with equal-sized sides
+   if(k<w.length){
+     const l=w.slice(0,k),r=w.slice(k+1);
+     const ok=l===r.split('').reverse().join('');
+     out.push({id:out.length,kind:'odd',k,left:l,right:r,center:w[k],ok,label:`Center at ${k}`,sub:`push ${k} · skip ${w[k]}`,reason:ok?'The two sides mirror around the center.':'The sides around this center do not mirror.'});
+   }
+ }
+ // Deduplicate irrelevant terminal odd/even candidates only by kind and k already unique.
+ return out;
+}
+function buildTimeline(b){
+ const w=word, n=w.length, st=[], tape=Array(n).fill(''), pushCount=b.k;
+ const add=(phase,pos,op,title,desc,stack,marks,state,trans)=>{
+  st.push({phase,pos,op,title,desc,stack:[...stack],marks:[...marks],state,trans});
+ };
+ let stack=[];
+ add('push',-1,'initialise','Ready to read',`The input is <strong>${w||'ε'}</strong>. The stack starts at bottom marker Z₀. This branch guesses ${b.kind==='even'?'an even split after '+b.k+' symbols.':'an odd midpoint at position '+(b.k+1)+'.'}`,stack,tape,'q₀','Start at q₀');
+ for(let i=0;i<pushCount;i++){
+   stack.push(w[i]);tape[i]='push';
+   add('push',i,'push',`Push <strong>${w[i]}</strong>`,`Read position ${i+1}. Push <strong>${w[i]}</strong> onto the stack. It becomes the new top symbol.`,stack,tape,'q₀',`δ(q₀, ${w[i]}, X) → push`);
+ }
+ add('guess',pushCount-1,'switch','Midpoint guessed',`This branch chooses to stop pushing and switch from q₀ to q₁. The guess may be right or wrong; other branches explore other split points.`,stack,tape,'q₁','q₀ → q₁ · guess');
+ let start=pushCount;
+ if(b.kind==='odd'&&b.k<n){
+   tape[b.k]='center';
+   add('guess',b.k,'skip',`Skip center <strong>${w[b.k]}</strong>`,`The center symbol is consumed without a stack operation. Odd-length palindromes have one unpaired middle character.`,stack,tape,'q₁',`δ(q₀, ${w[b.k]}, X) → skip center`);
+   start=b.k+1;
+ }
+ let mismatch=false;
+ for(let i=start;i<n;i++){
+   const top=stack[stack.length-1];
+   if(top===w[i]&&top!==undefined){
+     tape[i]='match';stack.pop();
+     add('match',i,'pop',`Mirror match: <strong>${w[i]}</strong>`,`Input <strong>${w[i]}</strong> equals stack top <strong>${top}</strong>. Pop it. One mirrored pair is verified.`,stack,tape,'q₁',`δ(q₁, ${w[i]}, ${top}) → pop`);
+   } else {
+     tape[i]='bad';mismatch=true;
+     add('reject',i,'mismatch','This branch hits a mismatch',`Input <strong>${w[i]}</strong> cannot match stack top <strong>${top===undefined?'∅':top}</strong>. This guessed path rejects. The machine may still accept on another branch.`,stack,tape,'q_dead',`Mismatch: ${w[i]} ≠ ${top===undefined?'∅':top}`);
+     break;
+   }
+ }
+ if(!mismatch){
+   const ok=stack.length===0;
+   add(ok?'accept':'reject',n-1,'finish',ok?'Branch accepts':'Input ended with symbols left',ok?`Every pair matched, the input is exhausted, and the stack is empty above Z₀. <strong>This branch accepts.</strong>`:`The input ended with unmatched symbols on the stack. This branch rejects.`,stack,tape,ok?'qᶠ':'q_dead',ok?'δ(q₁, ε, Z₀) → q_accept':'Input exhausted · stack not empty');
+ }
+ return st;
+}
+function renderBranches(){
+ $('branchTotal').textContent=`${branches.length} PATHS`;
+ $('branches').innerHTML=branches.map((b,i)=>`<button class="branch ${i===chosen?'selected':''}" data-i="${i}"><span class="branch-id">${String(i+1).padStart(2,'0')}</span><span class="branch-main">${b.kind==='even'?'Even split':'Odd center'}<span class="branch-sub">${b.kind==='even'?`after ${b.k} chars`:`at “${b.center}” · position ${b.k+1}`}</span></span><span class="pill ${b.ok?'yes':'no'}">${b.ok?'ACCEPT':'REJECT'}</span></button>`).join('');
+ document.querySelectorAll('.branch').forEach(btn=>btn.addEventListener('click',()=>{stop();chosen=+btn.dataset.i;step=0;timeline=buildTimeline(branches[chosen]);renderBranches();render();}));
+}
+function renderMirror(s){
+ const arena=$('mirrorArena'), cells=$('mirrorCells'), svg=$('mirrorLines'), mark=$('centerMark'), verdict=$('mirrorVerdict');
+ const b=branches[chosen], n=word.length;
+ cells.innerHTML=word?[...word].map((ch,i)=>{
+   let cls='';
+   if(b.kind==='odd'&&i===b.k) cls='center';
+   else if(i<b.k) cls='left';
+   else if(i>b.k || b.kind==='even'&&i>=b.k) cls='right';
+   if(s.marks[i]==='bad') cls='bad';
+   return `<div class="mirror-cell ${cls}" data-index="${i}"><span class="mi">${i+1}</span>${escapeHtml(ch)}</div>`;
+ }).join(''):'<span class="mono" style="color:var(--muted)">ε · empty string mirrors itself</span>';
+ mark.classList.toggle('show',b.kind==='odd');
+ mark.textContent=b.kind==='odd'?'SINGLE CENTER · NO PAIR':'GUESSED SPLIT';
+ svg.innerHTML='';
+ // Draw curved, paired connections between corresponding symbols on opposite sides.
+ if(n){
+   const stage=$('mirrorStage'), rect=stage.getBoundingClientRect();
+   svg.setAttribute('viewBox',`0 0 ${rect.width} ${rect.height}`);
+   const pairs=[];
+   const leftN=b.left.length, rightStart=b.kind==='odd'?b.k+1:b.k;
+   for(let j=0;j<Math.min(leftN,b.right.length);j++){
+     const li=b.k-1-j, ri=rightStart+j;
+     if(li<0||ri>=n)continue;
+     const a=stage.querySelector(`[data-index="${li}"]`), z=stage.querySelector(`[data-index="${ri}"]`);
+     if(!a||!z)continue;
+     const ar=a.getBoundingClientRect(), zr=z.getBoundingClientRect();
+     const x1=ar.left+ar.width/2-rect.left, x2=zr.left+zr.width/2-rect.left;
+     const y1=ar.bottom-rect.top+3, y2=zr.bottom-rect.top+3;
+     const matched=word[li]===word[ri], inspected=s.marks[li]==='match'||s.marks[ri]==='match'||s.phase==='accept';
+     const mismatch=s.marks[li]==='bad'||s.marks[ri]==='bad'||(s.phase==='reject'&&word[li]!==word[ri]&&li===b.k-1);
+     const color=mismatch?'#ff806e':matched?'#8df0c5':'#53634f';
+     const opacity=inspected||mismatch?'.95':'.35';
+     const lift=Math.min(70,Math.max(28,Math.abs(x2-x1)*.26));
+     const path=`M ${x1} ${y1} C ${x1} ${y1+lift}, ${x2} ${y2+lift}, ${x2} ${y2}`;
+     pairs.push(`<path d="${path}" fill="none" stroke="${color}" stroke-width="${inspected||mismatch?1.8:1.1}" stroke-linecap="round" opacity="${opacity}" ${inspected||mismatch?'stroke-dasharray="none"':'stroke-dasharray="3 5"'}><animate attributeName="stroke-dashoffset" from="18" to="0" dur=".7s" repeatCount="1"/></path><circle cx="${x1}" cy="${y1}" r="2.3" fill="${color}" opacity="${opacity}"/><circle cx="${x2}" cy="${y2}" r="2.3" fill="${color}" opacity="${opacity}"/>`);
+   }
+   svg.innerHTML=pairs.join('');
+ }
+ const isFinal=s.phase==='accept'||s.phase==='reject';
+ const accepted=branches.some(x=>x.ok);
+ arena.classList.remove('reveal-pairs');void arena.offsetWidth;arena.classList.add('reveal-pairs');
+ verdict.className='mirror-verdict'+(isFinal?(b.ok?' good':' bad'):'');
+ if(isFinal){
+   verdict.innerHTML=`<span class="spark">${b.ok?'✳':'×'}</span><span>${b.ok?'Every reflected pair agrees.':'This split does not mirror.'} ${b.ok?'The symmetry holds for this branch.':accepted?'Try another midpoint: another branch may accept.':'No split produces a complete mirror.'}</span>`;
+ } else if(s.phase==='match'){
+   verdict.innerHTML='<span class="spark">↔</span><span>Compare each right-side symbol with the most recently stored left-side symbol.</span>';
+ } else if(s.phase==='guess'){
+   verdict.innerHTML=`<span class="spark">◇</span><span>${b.kind==='odd'?'The center symbol is unpaired.':'The split is between symbols.'} The machine commits to this midpoint guess.</span>`;
+ } else {
+   verdict.innerHTML='<span class="spark">↗</span><span>Green and mint halves are candidates for reflection. Step forward to test each pair.</span>';
+ }
+}
+function render(){
+ const s=timeline[step];if(!s)return;
+ $('stepNum').textContent=String(step+1).padStart(2,'0');
+ $('stepTitle').innerHTML=s.title;$('stepText').innerHTML=s.desc;
+ $('stateBadge').textContent=`STATE ${s.state} · ${s.phase.toUpperCase()}`;
+ $('tapeInfo').textContent=`${word.length} SYMBOLS · ${s.pos<0?'HEAD AT START':`HEAD AT ${s.pos+1}`}`;
+ $('tape').innerHTML=word?[...word].map((ch,i)=>`<div class="char ${s.marks[i]||''}"><span class="index">${i}</span>${escapeHtml(ch)}</div>`).join(''):'<span class="mono" style="color:var(--muted)">ε · empty string</span>';
+ $('pointer').innerHTML=s.pos<0?'<span></span>READ HEAD AT START<span></span>':s.pos>=word.length?'<span></span>INPUT EXHAUSTED<span></span>':`<span></span>READ HEAD · POSITION ${s.pos+1}<span></span>`;
+ $('stack').innerHTML=s.stack.length?s.stack.map((ch,i)=>`<div class="stack-block ${i===s.stack.length-1?'top':''}">${escapeHtml(ch)}${i===s.stack.length-1?'　← TOP':''}</div>`).join(''):'<div class="empty">STACK EMPTY ABOVE Z₀</div>';
+ $('stackCount').textContent=`${s.stack.length} ITEM${s.stack.length===1?'':'S'}`;
+ $('stackOp').innerHTML=`Operation: <b>${s.op}</b>`;
+ ['q0','q1','qf'].forEach(id=>{$(id).classList.remove('active','accept','reject');});
+ $('qf').style.display='none';
+ if(s.state==='q₀')$('q0').classList.add('active');
+ else if(s.state==='q₁')$('q1').classList.add('active');
+ else if(s.state==='qᶠ'){$('qf').style.display='grid';$('qf').classList.add('accept');$('q0').classList.remove('active');$('q1').classList.remove('active');}
+ else { $('q1').classList.add('reject'); }
+ renderMirror(s);
+ $('transition').textContent=s.trans;
+ $('stateOp').innerHTML=`Transition: <b>${s.phase==='push'?'read + push':s.phase==='guess'?'guess midpoint':s.phase==='match'?'compare + pop':s.phase==='accept'?'accept':'reject branch'}</b>`;
+ $('back').disabled=step===0;$('next').disabled=step===timeline.length-1;
+ $('next').textContent=step===timeline.length-1?'Path complete ✓':'Next transition →';
+ $('progressBar').style.width=`${timeline.length<=1?100:step/(timeline.length-1)*100}%`;
+ $('progressText').textContent=`STEP ${step+1} OF ${timeline.length}`;
+ $('branchResult').textContent=step===timeline.length-1?(s.phase==='accept'?'THIS BRANCH ACCEPTS':'THIS BRANCH REJECTS'):'BRANCH IN PROGRESS';
+ const res=$('result');res.className='result';
+ if(step===timeline.length-1){
+   const accepts=branches.some(b=>b.ok), selected=branches[chosen];
+   res.classList.add('show',selected.ok?'good':'bad');
+   res.innerHTML=`<strong>${selected.ok?'✓ ACCEPTING PATH FOUND':'× THIS PATH REJECTS'}</strong>${selected.ok?`“${escapeHtml(word)||'ε'}” is a palindrome. This midpoint guess matches every mirrored pair.`:`This midpoint guess fails. ${accepts?'However, another branch accepts, so the NPDA accepts the input overall.':'No midpoint guess matches the string, so the input is not a palindrome.'}`}`;
+ }
+ $('auto').textContent=timer?'Ⅱ Pause':'▶ Play sequence';
+}
+function escapeHtml(x){return String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function load(){
+ stop();const w=$('word').value.replace(/\s/g,'');
+ if(!/^[\p{L}\p{N}\p{S}\p{P}]*$/u.test(w)){ $('word').setCustomValidity('Use letters, digits, or symbols without spaces.');$('word').reportValidity();return;}
+ $('word').setCustomValidity('');word=w.toUpperCase();$('word').value=word;
+ branches=makeBranches(word);chosen=branches.findIndex(b=>b.ok);if(chosen<0)chosen=0;
+ timeline=buildTimeline(branches[chosen]);step=0;
+ document.querySelectorAll('.sample').forEach(b=>b.classList.toggle('active',b.dataset.word===word));
+ renderBranches();render();
+}
+$('load').addEventListener('click',load);$('word').addEventListener('keydown',e=>{if(e.key==='Enter')load()});
+document.querySelectorAll('.sample').forEach(b=>b.addEventListener('click',()=>{$('word').value=b.dataset.word;load()}));
+$('next').addEventListener('click',()=>{if(step<timeline.length-1){step++;render()}else stop()});
+$('back').addEventListener('click',()=>{stop();step=Math.max(0,step-1);render()});
+$('reset').addEventListener('click',()=>{stop();step=0;render()});
+$('auto').addEventListener('click',()=>{if(timer){stop();render();return}if(step>=timeline.length-1)step=0;timer=setInterval(()=>{if(step>=timeline.length-1){stop();render();return}step++;render()},900);render()});
+load();
+window.addEventListener('resize',()=>{const s=timeline[step];if(s)renderMirror(s)});
+})();
+</script>
+
+</body></html>
